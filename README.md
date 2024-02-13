@@ -8,7 +8,7 @@ My goal is to utilize data visualization as a tool to assist others to gain a de
 
 ![7FEEDF95-12CA-4F5A-BD2B-0CB44AA1ABA1](https://github.com/estridge2014/d3_spring_2024/assets/84936545/4055d995-ec7d-4d01-8b34-aaf5fc1a751a) [^footnote]
 
-[^footnote]: Source:, [Whatsapp Message](https://google.com)
+[^footnote]: Source:, [Whatsapp Message](https://www.whatsapp.com/)
 
-<sub><sup> Me motivating myself for Mondays </sup></sub>
+<sub>Me motivating myself for Mondays</sub>
 
