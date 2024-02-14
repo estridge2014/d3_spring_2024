@@ -1,7 +1,7 @@
 # DATA 70600: Computational Fundamentals
 #### Semester: Spring, 2024
 #### Meeting Time: Tuesday Evenings From 5:15 till 6:15
-
+-----------------------
 
 ## Savannah Estridge (She/Her)
 #### A Little About Me: 
