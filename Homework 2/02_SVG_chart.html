@@ -12,27 +12,27 @@
         <script type="text/javascript">
            
            //1. Include our data for our bar chart 
-           const data = [10, 20, 30, 40, 50];
-           //const data = [10, 20, 30, 40, 50, 60, 70, 80];
+           //const data = [10, 20, 30, 40, 50];
+           const data = [10, 20, 30, 40, 50, 60, 70, 80];
 
 
             //2. Declare SVG width, height, and the space between bars, in pixels
-            const svgWidth = 500;
-            const svgHeight = 300;
-            const barPadding = 1;
+            const svgWidth = 500;//width of our SVG
+            const svgHeight = 300;//height of our SVG
+            const barPadding = 1;//space between bars
 
             //3. Create our SVG element
-            const svg = d3.select("body")
+            const svg = d3.select("body")//select the body of our HTML
                         .append("svg")//we are now appending our svg 
                         .attr("width", svgWidth)//apply width and height specified  
-                        .attr("height", svgHeight);
+                        .attr("height", svgHeight);//apply width and height specified
 
 
             // 4. Make rects and add them to SVG to visualize our data. 
             // Remember they will need an x,y,width, and height. 
             svg.selectAll("rect") //selectAll rects in the SVG not just one
                 .data(data) //our data! 
-                .enter()
+                .enter()//returns placeholder for missing elements
                 .append("rect") //actually adds rect
                 .attr("x", (d,i) => i * (svgWidth / data.length)) // x for rects: making rects evenly spaced per the width of our canvas, remember: d is our data value and i is our index placeholder
                 .attr("y", d=> svgHeight - d) // y for rects: making the y for rects the height of the svg minus the data value --  remember SVG coordinates (x,y) for rect are for the upper-left corner!

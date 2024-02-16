@@ -26,18 +26,19 @@
         
         //2. Declare SVG width and height in pixels (remember the ; after declaring variables!)
             
-            //TODO: const 
-            //TODO: const
+             const svgWidth = 500;
+             const svgHeight = 300;
+           
 
 
         //3. Create our SVG element, applying the SVG (canvas) width and height 
         //NOTE: this should be pretty straight forward from our example. 
             
             
-            //TODO: const svg = d3.select()
-                                // .append()
-                                // .attr() 
-                                // .attr(); //Hint: don't delete this ending ;
+             const svg = d3.select("body")//select the body of our HTML
+                        .append("svg")//we are now appending our svg
+                        .attr("width", svgWidth)//apply width and height specified 
+                        .attr("height", svgHeight); //Hint: don't delete this ending 
 
 
             
