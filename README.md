@@ -10,9 +10,9 @@ My name is Savannah Estridge (she/her). I am originally from Kentucky but have l
 
 My goal is to utilize data visualization as a tool to assist others to gain a deeper understanding and appreciation of current events, ideas and cultures across the world. I mainly code with R and occasionally python. I'm totally new to D3 and looking forward to picking up the skills to create interactive data visualizations.
 
-| week                               | Homework                     |
+| Week                               | Homework                     |
 |------------------------------------|------------------------------|
-| Week x                             |                              |
+| Week 3                             | [Homework 2](https://github.com/estridge2014/d3_spring_2024/blob/main/Homework%202/03_hw_worksheet.html) |
 |                                    |                              |
 |                                    |                              |
 
