@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>SVG Scatterplot Homework 1</title>
-        <scrip src= "https://d3js.org/d3.v7.min.js"></script>
+        <script src= "https://d3js.org/d3.v7.min.js"></script>
         <style type="text/css">
             /*TBD*/
 
@@ -27,7 +27,8 @@
         //2. Declare SVG width and height in pixels (remember the ; after declaring variables!)
             
              const svgWidth = 500;
-             const svgHeight = 300;
+             const svgHeight = 400;
+      
            
 
 
@@ -48,29 +49,32 @@
         x,y,width,height. But, "circle" requires different parameters
         (3 in total)-check today's slide deck.*/ 
         //TIP: get the circles showing before you attempt the labels (step 5) 
-            
-            //TODO: svg.selectAll()
-                        // .data()
-                        // .enter()
-                        // .append()
-                        // .attr() //(a required circle value, and a function of what it returns)  // Hint: we want to return d[] with the x value of the array
-                        // .attr() //(a required circle value, and a function of what it returns)  // Hint: we want to return d[] with the y value of the array 
-                        // .attr() //(another required circle value, and a number: try 10)
-                        // .attr(); //optional: change the color of the circles 
+
+        //Required Attributes for Circles: cx, cy, r
 
             //HINT: don't forget the ending ;
+
+            svg.selectAll("circle")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", d => d[0]) // x-coordinate from the first element of the inner array
+            .attr("cy", d => d[1]) // y-coordinate from the second element of the inner array
+            .attr("r", 10);
 
 
         //5. Add data labels 
         //NOTE: This will rely on much of the same code we have used in our SVG example. 
             
-            // TODO: svg.selectAll()
-            //      .data()
-            //      .enter()
-            //      .append()
-            //      .text() //we want the text to return the data values
-            //      .attr() //we want to give the text an x value, use what you used above, mind the difference between circle text properties 
-            //      .attr(); //we want to give the text a y value, use what you used above, mind the difference between circle text properties 
+                 svg.selectAll("text")
+                 .data(data)
+                 .enter()
+                 .append("text") //we want to append text to our SVG (not a circle, not a rect, but text!
+                 .text(d=>d) //we want the text to return the data values
+                    .attr("x", d => d[0] + 20) //we want to give the text an x value, use what you used above, mind the difference between circle text properties
+                    .attr("y", d => d[1]); //we want to give the text a y value, use what you used above, mind the difference between circle text properties
+                //  .attr("cx", ) //we want to give the text an x value, use what you used above, mind the difference between circle text properties 
+                //  .attr(); //we want to give the text a y value, use what you used above, mind the difference between circle text properties 
 
 
         /*OPTIONAL: other .attr() properties you might add to a text 
