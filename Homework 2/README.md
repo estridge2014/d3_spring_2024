@@ -24,4 +24,4 @@ const data = [
 ### Rendered Image
 ------------
 
-<img width="547" alt="scatterplot" src="https://github.com/estridge2014/d3_spring_2024/assets/84936545/034afc19-5d64-4c8c-84bc-2c7cf5a902d8">
+<img width="547" alt="scatterplot" src="https://github.com/estridge2014/d3_spring_2024/assets/84936545/90daff5c-7717-45cb-9676-c221ef488e82">
