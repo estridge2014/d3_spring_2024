@@ -30,7 +30,7 @@ This repository follows the following structure:
 
 | Week                               | Homework Script                     |
 |------------------------------------|------------------------------|
-| Week 3                             | [Homework 2](https://github.com/estridge2014/d3_spring_2024/blob/main/Homework%202/03_hw_worksheet.html) |
+| Week 3                             | [Homework 1](https://github.com/estridge2014/d3_spring_2024/blob/main/Homework%202/03_hw_worksheet.html) |
 |                                    |                              |
 |                                    |                              |
 
