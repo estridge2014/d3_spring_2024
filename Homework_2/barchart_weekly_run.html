@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bar Chart Scales and Load Data</title>
+        <script type="text/javascript" src= "https://d3js.org/d3.v7.min.js"></script>
+        <style type="text/css">
+            /*TBD*/
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+        
+        //Declare consts/global variables
+        const margin = 30;
+        const width = 500; 
+        const height = 500;
+        const padding = .02;  
+
+
+        //Load running data and related variables
+        d3.csv("rundata.csv").then(data => {
+            console.log("data", data)
+        //format data
+        data.forEach(d => { 
+            d.Day = d.Day;
+            d.Miles = +d.Miles; 
+        });
+
+        const maxY = d3.max(data, d => d.Miles);
+
+
+        //Scales - note: band and linear
+        const xScale = d3.scaleBand()
+                        .domain(data.map(d => d.Day))
+                        .range([margin, width - margin])
+                        .paddingInner(padding);
+        
+        const yScale = d3.scaleLinear()
+                        .domain([0, maxY]) 
+                        .range([height - margin, margin]);
+        
+
+        //SVG
+        const svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+                    
+        //Axes - create and implement x/y axes
+        const bottomAxis = d3.axisBottom()
+                             .scale(xScale);
+        
+        svg.append("g")
+            .attr("transform", "translate(0," + (height - margin) + ")") 
+            .call(bottomAxis); 
+        
+        const leftAxis = d3.axisLeft()
+                           .scale(yScale);
+
+        svg.append("g")
+            .attr("transform", "translate(" + margin + ",0)")
+            .call(leftAxis); 
+        
+        //Bars
+        svg.selectAll("rect") 
+            .data(data) 
+            .enter()
+            .append("rect")
+            .attr("x", d => xScale(d.Day)) 
+            .attr("y", d => yScale(d.Miles)) 
+            .attr("width", xScale.bandwidth())
+            .attr("height", d => (height-margin) - yScale(d.Miles))
+            .attr("fill", "pink");
+
+                
+    });
+        </script>
+    </body>
+</html>
