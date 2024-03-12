@@ -1,10 +1,10 @@
-# Homework 1 
+# Homework 2 
 ---------------------------------
 
-Homework 2 demonstates the following fundamental concepts:  
+Homework 2 demonstates the following key concepts:  
 
-- Chaining, selecting, and binding data
-- Defining a SVG element
+- chaining, selecting and binding data
+- Defining an SVG element
 - Creating shapes to append to the SVG element we defined (the element for this script will be a circle)
 - Appending the circle to the SVG element to create a scatterplot
 - Creating labels for the SVG elements
@@ -12,7 +12,7 @@ Homework 2 demonstates the following fundamental concepts:
 -----------
 ### Data Source:
 
-Generate data by defining an array of arrays to use as X and Y coordinates for the scatterplot. 
+Generate our data by defining an array of arrays to yse as the X and Y coordinates for our scatterplot. 
 
 ```javascript
 // Define our dataset.
