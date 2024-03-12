@@ -1,7 +1,7 @@
-# Homework 2 
+# Homework 1 
 ---------------------------------
 
-Homework 2 demonstates the following key concepts:  
+Homework 1 demonstates the following key concepts:  
 
 - chaining, selecting and binding data
 - Defining an SVG element
